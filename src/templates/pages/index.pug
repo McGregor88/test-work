@@ -1,0 +1,31 @@
+doctype html
+html(lang="ru")
+	head
+		include ../partials/common/head
+
+	body
+
+		.page
+
+			//- Top section
+			section.top-section
+				.container.text-center
+					h2.top-section__title Ты готов стать профессионалом?
+					p.top-section__descr Мы ищем #[strong.color-orange талантов] и #[strong.color-orange саппортов] в команду. Решите на какую категорию вы претендуете.
+					a.top-section__link.js-scroll(href="#profile") Заполнить анкету
+
+			//- Main section
+			section.main-section
+
+			//- Content section
+			section.content-section
+
+			//- Advantages section
+			section.advantages-section.gray-theme
+				.container
+					h3.advantages-section__title.text-center Преимущества работы с нами
+
+			//- Form section
+			section.form-section.dark-theme(id="profile")
+				.container.color-white
+					h3.form-section__title.text-center Теперь расскажи о себе
