@@ -1,16 +1,95 @@
 // Main page
 
+// Top section
 .top-section
     height: 480px
 
-.main-section
-    height: 1045px
+    &__title
+        line-height: 54px
+    
+    &__descr
+        line-height: 26px
+        color: #4A4556
+    
+    &__link
+        line-height: 20px
+        letter-spacing: 0.02em
 
+// Image section
+.image-section
+    height: 600px
+    background-position: center center
+    background-repeat: no-repeat
+    background-size: cover
+
+// Features section
+.features-section
+    height: 445px
+
+.features-list
+    position: relative
+    top: -100px
+    height: 464px
+    background-color: #fff
+    z-index: 1
+
+.features-item
+    display: inline-block
+    vertical-align: top
+    width: 50%
+    height: 232px
+    border: 1px solid #ededed
+    font-size: initial
+
+    &__name
+        font-size: 12px
+        line-height: 19px
+        letter-spacing: 0.04em
+
+    &__descr
+        font-size: 24px
+        line-height: 30px
+        letter-spacing: -0.03em
+
+// Content section
 .content-section
     height: 737px
 
+    &__title
+        line-height: 60px
+
+.text-content
+    p
+        line-height: 26px
+
+// Advantages section
 .advantages-section
     height: 737px
 
+    &__title
+        line-height: 50px
+
+.advantages-list
+    margin: 0 -30px
+
+.advantages-item
+    display: inline-block
+    vertical-align: top
+    margin: 0 15px
+    width: calc(33.33% - 30px)
+    font-size: initial
+
+    &__title
+        font-size: 20px
+        line-height: 25px
+    
+    &__descr
+        line-height: 26px
+
+
+// Form section
 .form-section
     height: 1130px
+
+    &__title
+        line-height: 52px

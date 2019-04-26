@@ -1,3 +1,9 @@
+//- Data
+include ../data/main
+
+//- Mixins
+include ../mixins/input
+
 doctype html
 html(lang="ru")
 	head
@@ -12,20 +18,99 @@ html(lang="ru")
 				.container.text-center
 					h2.top-section__title Ты готов стать профессионалом?
 					p.top-section__descr Мы ищем #[strong.color-orange талантов] и #[strong.color-orange саппортов] в команду. Решите на какую категорию вы претендуете.
-					a.top-section__link.js-scroll(href="#profile") Заполнить анкету
+					a.top-section__link.text-upper.js-scroll(href="#profile") Заполнить анкету
 
-			//- Main section
-			section.main-section
+			//- Image section
+			section.image-section(style={"background-image":"url('upload/image.png')"})
+
+			//- Features section
+			section.features-section.gray-theme
+				.container-md
+					ul.features-list.wrapper
+						each item in features
+							li.features-item
+								.features-item__name.text-upper.color-orange #{item.name}
+								p.features-item__descr #{item.descr}
 
 			//- Content section
 			section.content-section
+				.container-sm
+					h3.content-section__title Мы похожи!
+					.text-content
+						p.
+							Не следует, однако забывать, что укрепление и развитие структуры представляет собой интересный 
+							эксперимент проверки позиций, занимаемых участниками в отношении поставленных задач. 
+							Разнообразный и богатый опыт рамки и место обучения кадров влечет за собой процесс внедрения 
+							и модернизации системы обучения кадров, соответствует насущным потребностям. Повседневная 
+							практика показывает, что укрепление и развитие структуры способствует подготовки и реализации 
+							форм развития.
+						p.
+							Разнообразный и богатый опыт начало повседневной работы по формированию позиции 
+							способствует подготовки и реализации дальнейших направлений развития. Равным образом 
+							дальнейшее развитие различных форм деятельности позволяет оценить значение соответствующий 
+							условий активизации. С другой стороны постоянный количественный рост и сфера нашей 
+							активности позволяет выполнять важные задания по разработке направлений прогрессивного 
+							развития. Разнообразный и богатый опыт укрепление и развитие структуры позволяет оценить 
+							значение дальнейших направлений развития. Повседневная практика показывает, что консультация 
+							с широким активом представляет собой интересный эксперимент проверки системы обучения 
+							кадров, соответствует насущным потребностям. Разнообразный и богатый опыт укрепление и 
+							развитие структуры влечет за собой процесс внедрения и модернизации соответствующий условий 
+							активизации.
 
 			//- Advantages section
 			section.advantages-section.gray-theme
 				.container
 					h3.advantages-section__title.text-center Преимущества работы с нами
+					ul.advantages-list.wrapper
+						each item in advantages
+							li.advantages-item
+								img(src="upload/icon.png" draggable="false" alt=item.title)/
+								.advantages-item__title #{item.title}
+								p.advantages-item__descr #{item.descr}
 
 			//- Form section
 			section.form-section.dark-theme(id="profile")
-				.container.color-white
+				.container-sm.color-white
 					h3.form-section__title.text-center Теперь расскажи о себе
+					.form-outer
+						form.form(method="POST")
+							.fieldset
+
+								+input_field({
+									num: 1,
+									label: "Фамилия и имя",
+									name: "name",
+									placeholder: "Сидоров Адександр",
+									required: true,
+									minLength: 5
+								})
+
+								+input_field({
+									num: 2,
+									label: "Электронная почта",
+									type: "email",
+									name: "email",
+									placeholder: "Sidorov@yandex.ru",
+									required: true
+								})
+
+								+input_field({
+									num: 3,
+									label: "Телефон",
+									type: "tel",
+									name: "phone",
+									placeholder: "+7 (999)-328-14-20",
+									required: true
+								})
+
+								+input_field({
+									num: 4,
+									label: "Какой деятельностью, не связанной с текущими проектами, вы бы хотели заниматься в рабочее время?",
+									name: "activity",
+									placeholder: "Свой проект по созданию универсальной инфраструктуры строительства",
+									required: true,
+									minLength: 4
+								})
+							
+							.form-submit
+								input.btn.btn-block(type="submit" value="Отправить")/

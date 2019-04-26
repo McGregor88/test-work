@@ -1,15 +1,47 @@
-/**
- * Buttons styles
- */
-
-button
-	padding: 0
-	border: none
-	outline: none
-	cursor: pointer
-
 button,
 html [type="button"],
 [type="reset"],
 [type="submit"]
 	-webkit-appearance: inherit
+
+button
+	padding: 0
+	border: 0
+	outline: none
+	cursor: pointer
+
+.btn
+	display: inline-block
+	vertical-align: baseline
+	cursor: pointer
+	height: 54px
+	font-size: 14px
+	letter-spacing: 0.04em
+	line-height: 54px
+	font-family: $regular
+	font-weight: 400
+	background-color: $white
+	border-radius: 111px
+	border: 0
+	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.12)
+	outline: none
+	text-decoration: none
+	text-transform: uppercase
+	text-align: center
+	color: $orange
+
+	transition: background-color 0.25s ease, color 0.25s ease
+
+	&:hover,
+	&:focus,
+	&:active,
+	&.active
+		background-color: $orange
+		color: $white
+
+	&.btn-block
+		display: block
+		padding: 
+			left: 10px
+			right: 10px
+		width: 100%

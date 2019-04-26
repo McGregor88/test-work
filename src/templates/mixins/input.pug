@@ -1,12 +1,25 @@
-//- Mixin params: 
-//-   required: boolean
-//-   label:	string
-//-	  name: 	string
-
 mixin input_field(obj)
-	- var required_class=""; if (obj && obj.required === true) required_class = " form-field--required"
-	- var input_value = ""; if (obj.value) input_value = obj.value;
+	-
+		var	num = obj.num || "";
+		var	label = obj.label || "";
+		var	type = obj.type || "text";
+		var	name = obj.name || "";
+		var	id = obj.id || name;
+		var	ph = obj.placeholder || label;
+		var	value = obj.value || "";
+		var	required = obj.required || false;
+		var	min_length = obj.minLength || false;
 
-	div(class="form-field" + required_class)
-		label #{obj.label}
-		input(type="text" class="form-field__element" placeholder=`${input_value}` name=`${obj.name}` )/
+	.form-element
+		.form-element__num.color-orange #{num}
+		label.form-element__label(for=id) #{label}
+		input(
+			id=id,
+			type=type,
+			class="input",
+			name=name,
+			placeholder=ph,
+			value=value,
+			required=required,
+			minlength=min_length
+		)/
