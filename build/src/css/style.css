@@ -1,11 +1,31 @@
 @font-face
 {
-    font-family: 'PartnerLight';
-    font-weight: normal;
+    font-family: 'Roboto';
+    font-weight: 400;
     font-style: normal;
 
-    src: url('../fonts/PartnerLight/PartnerLight.eot');
-    src: url('../fonts/PartnerLight/PartnerLight.eot?#iefix') format('embedded-opentype'), url('../fonts/PartnerLight/PartnerLight.woff') format('woff'), url('../fonts/PartnerLight/PartnerLight.ttf') format('truetype');
+    src: url('../fonts/Roboto/RobotoRegular.eot');
+    src: url('../fonts/Roboto/RobotoRegular.eot?#iefix') format('embedded-opentype'), url('../fonts/Roboto/RobotoRegular.woff') format('woff'), url('../fonts/Roboto/RobotoRegular.ttf') format('truetype');
+}
+
+@font-face
+{
+    font-family: 'DINPro';
+    font-weight: 400;
+    font-style: normal;
+
+    src: url('../fonts/DINPro/DINPro.eot');
+    src: url('../fonts/DINPro/DINPro.eot?#iefix') format('embedded-opentype'), url('../fonts/DINPro/DINPro.woff') format('woff'), url('../fonts/DINPro/DINPro.ttf') format('truetype');
+}
+
+@font-face
+{
+    font-family: 'Gilroy';
+    font-weight: 400;
+    font-style: normal;
+
+    src: url('../fonts/Gilroy/Gilroy-Regular.eot');
+    src: url('../fonts/Gilroy/Gilroy-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/Gilroy/Gilroy-Regular.woff') format('woff'), url('../fonts/Gilroy/Gilroy-Regular.ttf') format('truetype');
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -445,7 +465,7 @@ optgroup,
 select,
 textarea
 {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 html,
@@ -456,7 +476,7 @@ body
 
 body
 {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 16px;
 
     position: relative;
@@ -497,8 +517,6 @@ h6,
 .h6,
 p
 {
-    font-family: inherit;
-
     margin: 0;
 
     color: inherit;
@@ -517,7 +535,8 @@ h5,
 h6,
 .h6
 {
-    font-weight: 500;
+    font-family: 'DINPro', sans-serif;
+    font-weight: 400;
     line-height: 1.1;
 
     letter-spacing: -.02em;
@@ -655,28 +674,6 @@ ul
 }
 
 /**
- * Icons
- */
-.icon
-{
-    display: inline-block;
-
-    vertical-align: top;
-
-    background-color: transparent;
-    background-repeat: no-repeat;
-}
-
-.icon.icon-arrow-down
-{
-    width: 9px;
-    height: 5px;
-    /*background-image: url("../img/icons/arrow-down.svg")*/
-
-    background-position: 0 0;
-}
-
-/**
  * Form elements
  */
 *::-webkit-input-placeholder
@@ -779,6 +776,7 @@ body textarea:required:valid
 
 .form-element__label
 {
+    font-family: 'DINPro', sans-serif;
     line-height: 25px;
 
     display: block;
@@ -884,7 +882,7 @@ button
 
 .btn
 {
-    font-family: Arial, sans-serif;
+    font-family: 'Gilroy', sans-serif;
     font-size: 14px;
     font-weight: 400;
     line-height: 54px;
@@ -950,6 +948,7 @@ button
 
 .top-section__link
 {
+    font-family: 'Gilroy', sans-serif;
     line-height: 20px;
 
     letter-spacing: .02em;
@@ -993,6 +992,12 @@ button
     vertical-align: top;
 
     border: 1px solid #ededed;
+}
+
+.features-item__name,
+.features-item__descr
+{
+    font-family: 'DINPro', sans-serif;
 }
 
 .features-item__name
@@ -1056,6 +1061,7 @@ button
 
 .advantages-item__title
 {
+    font-family: 'DINPro', sans-serif;
     font-size: 20px;
     line-height: 25px;
 }

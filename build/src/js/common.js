@@ -1,6 +1,6 @@
 var scrollSpeed = 800;
 
-$(document).ready(function() {
+$(document).ready(function () {
 
 	// Mask
 	if ($("input[type='tel']").length) {
@@ -10,7 +10,7 @@ $(document).ready(function() {
 	// Scroll
 	if ($(".js-scroll").length) {
 
-		$(".js-scroll").on("click", function(e) {   
+		$(".js-scroll").on("click", function (e) {
 			e.preventDefault();
 			var id = $(this).attr("href");
 
@@ -23,11 +23,11 @@ $(document).ready(function() {
 
 	// Form
 	if ($(".form").length) {
-		$(".form").one("mouseenter", function() {
-			
+		$(".form").one("mouseenter", function () {
+
 			$(this).validate({
 				errorElement: "div",
-				errorPlacement: function(error, element) {
+				errorPlacement: function (error, element) {
 					element.after(error);
 				},
 				messages: {
@@ -40,7 +40,7 @@ $(document).ready(function() {
 		})
 	}
 
-	$(document).on("submit", ".form", function(e) {
+	$(document).on("submit", ".form", function (e) {
 		e.preventDefault();
 		var _form = $(this);
 
@@ -51,14 +51,14 @@ $(document).ready(function() {
 				form: _form.serialize()
 			},
 			type: "POST",
-			beforeSend: function() {
+			beforeSend: function () {
 				if (_form.data("is-modal")) {
 					var fancy = $.fancybox.getInstance();
-					
+
 					fancy.showLoading();
 				}
 			},
-			success: function(data) {
+			success: function (data) {
 				try {
 					data = $.parseJSON(data);
 					if (data.result) {
@@ -70,7 +70,7 @@ $(document).ready(function() {
 						success.find(".popup-title").html(success_title);
 						success.find(".success-message p").html(success_msg);
 
-						setTimeout(function() {
+						setTimeout(function () {
 							if (_form.data("is-modal")) {
 								$.fancybox.close(true);
 							}
@@ -88,7 +88,7 @@ $(document).ready(function() {
 				} catch (e) {
 					console.info(data);
 				}
-				
+
 				if (_form.data("is-modal")) {
 					var fancy = $.fancybox.getInstance();
 					fancy.hideLoading();
@@ -96,7 +96,7 @@ $(document).ready(function() {
 
 				$(_form).trigger("reset");
 			},
-			complete: function(jqXHR, textStatus) {
+			complete: function (jqXHR, textStatus) {
 				if (_form.data("is-modal")) {
 					var fancy = $.fancybox.getInstance();
 					fancy.hideLoading();
@@ -104,12 +104,10 @@ $(document).ready(function() {
 
 				$(_form).trigger("reset");
 			},
-			error: function(jqXHR, textStatus, errorThrown) {
+			error: function (jqXHR, textStatus, errorThrown) {
 				console.info(textStatus + " " + errorThrown);
 			}
 		}); // ajax end
 	});
-
-	console.log(1);
 
 });
