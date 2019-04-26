@@ -2,19 +2,53 @@
 
 // Top section
 .top-section
+    padding: 
+        top: 50px
+        bottom: 50px
     height: 480px
 
     &__title
+        margin-bottom: 0.5em
         line-height: 54px
     
     &__descr
+        margin-bottom: 2em
         line-height: 26px
         color: #4A4556
     
     &__link
-        font-family: $gilroy
-        line-height: 20px
+        position: relative
+        display: inline-block
+        vertical-align: top
+        font-family: $gilroyBold
+        line-height: 54px
         letter-spacing: 0.02em
+
+        &::before
+            content: '+'
+            display: block
+            padding-left: 20px
+            position: absolute
+            top: 50%
+            left: -48px
+            width: 54px
+            height: 54px
+            font-size: 25px
+            line-height: 54px
+            margin-top: -27px
+            background-color: #878787
+            background-color: rgba(135, 135, 135, 0.05)
+            border-radius: 111px
+            color: $orange
+            box-sizing: border-box
+            text-align: left
+            transition: width 0.4s ease-in-out
+
+        &:hover,
+        &:focus
+
+            &::before
+                width: 236px
 
 // Image section
 .image-section
@@ -42,17 +76,15 @@
     border: 1px solid #ededed
     font-size: initial
 
-    &__name,
-    &__descr
-        font-family: $din
-
     &__name
         font-size: 12px
+        font-family: $dinBold
         line-height: 19px
         letter-spacing: 0.04em
 
     &__descr
         font-size: 24px
+        font-family: $din
         line-height: 30px
         letter-spacing: -0.03em
 
@@ -84,13 +116,32 @@
     width: calc(33.33% - 30px)
     font-size: initial
 
+    &__icon
+        vertical-align: top
+
     &__title
+        position: relative
+        margin: 
+            top: 20px
+            bottom: 40px
         font-size: 20px
-        font-family: $din
+        font-family: $dinBold
         line-height: 25px
+
+        &::after
+            content: ''
+            display: block
+            position: absolute
+            top: 100%
+            left: 0
+            margin-top: 20px
+            width: 24px
+            height: 2px
+            background-color: $orange
     
     &__descr
         line-height: 26px
+        color: #4E4D53
 
 
 // Form section

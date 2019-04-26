@@ -11,7 +11,7 @@
 @font-face
 {
     font-family: 'DINPro';
-    font-weight: 400;
+    font-weight: normal;
     font-style: normal;
 
     src: url('../fonts/DINPro/DINPro.eot');
@@ -20,12 +20,32 @@
 
 @font-face
 {
+    font-family: 'DINProBold';
+    font-weight: normal;
+    font-style: normal;
+
+    src: url('../fonts/DINPro/DINPro-Bold.eot');
+    src: url('../fonts/DINPro/DINPro-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/DINPro/DINPro-Bold.woff') format('woff'), url('../fonts/DINPro/DINPro-Bold.ttf') format('truetype');
+}
+
+@font-face
+{
     font-family: 'Gilroy';
-    font-weight: 400;
+    font-weight: normal;
     font-style: normal;
 
     src: url('../fonts/Gilroy/Gilroy-Regular.eot');
     src: url('../fonts/Gilroy/Gilroy-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/Gilroy/Gilroy-Regular.woff') format('woff'), url('../fonts/Gilroy/Gilroy-Regular.ttf') format('truetype');
+}
+
+@font-face
+{
+    font-family: 'GilroyBold';
+    font-weight: normal;
+    font-style: normal;
+
+    src: url('../fonts/Gilroy/Gilroy-Bold.eot');
+    src: url('../fonts/Gilroy/Gilroy-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/Gilroy/Gilroy-Bold.woff') format('woff'), url('../fonts/Gilroy/Gilroy-Bold.ttf') format('truetype');
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -776,7 +796,7 @@ body textarea:required:valid
 
 .form-element__label
 {
-    font-family: 'DINPro', sans-serif;
+    font-family: 'DINProBold', sans-serif;
     line-height: 25px;
 
     display: block;
@@ -882,7 +902,7 @@ button
 
 .btn
 {
-    font-family: 'Gilroy', sans-serif;
+    font-family: 'GilroyBold', sans-serif;
     font-size: 14px;
     font-weight: 400;
     line-height: 54px;
@@ -932,26 +952,74 @@ button
 .top-section
 {
     height: 480px;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 .top-section__title
 {
     line-height: 54px;
+
+    margin-bottom: .5em;
 }
 
 .top-section__descr
 {
     line-height: 26px;
 
+    margin-bottom: 2em;
+
     color: #4a4556;
 }
 
 .top-section__link
 {
-    font-family: 'Gilroy', sans-serif;
-    line-height: 20px;
+    font-family: 'GilroyBold', sans-serif;
+    line-height: 54px;
 
+    position: relative;
+
+    display: inline-block;
+
+    vertical-align: top;
     letter-spacing: .02em;
+}
+
+.top-section__link::before
+{
+    font-size: 25px;
+    line-height: 54px;
+
+    position: absolute;
+    top: 50%;
+    left: -48px;
+
+    display: block;
+
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    width: 54px;
+    height: 54px;
+    margin-top: -27px;
+    padding-left: 20px;
+
+    content: '+';
+    -webkit-transition: width .4s ease-in-out;
+         -o-transition: width .4s ease-in-out;
+            transition: width .4s ease-in-out;
+    text-align: left;
+
+    color: #f47821;
+    -webkit-border-radius: 111px;
+            border-radius: 111px;
+    background-color: #878787;
+    background-color: rgba(135, 135, 135, .05);
+}
+
+.top-section__link:hover::before,
+.top-section__link:focus::before
+{
+    width: 236px;
 }
 
 .image-section
@@ -994,14 +1062,9 @@ button
     border: 1px solid #ededed;
 }
 
-.features-item__name,
-.features-item__descr
-{
-    font-family: 'DINPro', sans-serif;
-}
-
 .features-item__name
 {
+    font-family: 'DINProBold', sans-serif;
     font-size: 12px;
     line-height: 19px;
 
@@ -1010,6 +1073,7 @@ button
 
 .features-item__descr
 {
+    font-family: 'DINPro', sans-serif;
     font-size: 24px;
     line-height: 30px;
 
@@ -1059,16 +1123,45 @@ button
     vertical-align: top;
 }
 
+.advantages-item__icon
+{
+    vertical-align: top;
+}
+
 .advantages-item__title
 {
-    font-family: 'DINPro', sans-serif;
+    font-family: 'DINProBold', sans-serif;
     font-size: 20px;
     line-height: 25px;
+
+    position: relative;
+
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.advantages-item__title::after
+{
+    position: absolute;
+    top: 100%;
+    left: 0;
+
+    display: block;
+
+    width: 24px;
+    height: 2px;
+    margin-top: 20px;
+
+    content: '';
+
+    background-color: #f47821;
 }
 
 .advantages-item__descr
 {
     line-height: 26px;
+
+    color: #4e4d53;
 }
 
 .form-section
