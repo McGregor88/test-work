@@ -1109,12 +1109,15 @@ button
 
 .advantages-section
 {
-    height: 737px;
+    padding-top: 120px;
+    padding-bottom: 160px;
 }
 
 .advantages-section__title
 {
-    line-height: 50px;
+    line-height: 1.25em;
+
+    margin-bottom: 1.5em;
 }
 
 .advantages-list
@@ -1144,12 +1147,12 @@ button
 {
     font-family: 'DINProBold', sans-serif;
     font-size: 20px;
-    line-height: 25px;
+    line-height: 1.25em;
 
     position: relative;
 
-    margin-top: 20px;
-    margin-bottom: 40px;
+    margin-top: 1.5em;
+    margin-bottom: 2.55em;
 }
 
 .advantages-item__title::after
@@ -1162,7 +1165,7 @@ button
 
     width: 24px;
     height: 2px;
-    margin-top: 20px;
+    margin-top: 22px;
 
     content: '';
 
@@ -1171,7 +1174,7 @@ button
 
 .advantages-item__descr
 {
-    line-height: 26px;
+    line-height: 1.66em;
 
     color: #4e4d53;
 }
