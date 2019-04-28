@@ -1042,8 +1042,6 @@ button
     z-index: 1;
     top: -100px;
 
-    height: 464px;
-
     background-color: #fff;
 }
 
@@ -1054,7 +1052,10 @@ button
     display: inline-block;
 
     width: 50%;
-    height: 232px;
+    padding-top: 50px;
+    padding-right: 60px;
+    padding-bottom: 59px;
+    padding-left: 60px;
 
     vertical-align: top;
 
@@ -1066,6 +1067,8 @@ button
     font-family: 'DINProBold', sans-serif;
     font-size: 12px;
     line-height: 19px;
+
+    margin-bottom: 1em;
 
     letter-spacing: .04em;
 }
