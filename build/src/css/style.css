@@ -951,23 +951,22 @@ button
 
 .top-section
 {
-    height: 480px;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 165px;
+    padding-bottom: 126px;
 }
 
 .top-section__title
 {
-    line-height: 54px;
+    line-height: 1.13em;
 
-    margin-bottom: .5em;
+    margin-bottom: .520834em;
 }
 
 .top-section__descr
 {
-    line-height: 26px;
+    line-height: 1.66em;
 
-    margin-bottom: 2em;
+    margin-bottom: 1.875em;
 
     color: #4a4556;
 }
