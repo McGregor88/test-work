@@ -1077,24 +1077,34 @@ button
 {
     font-family: 'DINPro', sans-serif;
     font-size: 24px;
-    line-height: 30px;
+    line-height: 1.25em;
 
     letter-spacing: -.03em;
 }
 
 .content-section
 {
-    height: 737px;
+    padding-top: 80px;
+    padding-bottom: 100px;
 }
 
 .content-section__title
 {
-    line-height: 60px;
+    line-height: 1.5em;
+
+    margin-bottom: .6em;
 }
 
 .text-content p
 {
-    line-height: 26px;
+    line-height: 1.66em;
+
+    margin-bottom: 1.9375em;
+}
+
+.text-content p:last-child
+{
+    margin-bottom: 0;
 }
 
 .advantages-section
