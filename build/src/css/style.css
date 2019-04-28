@@ -769,7 +769,7 @@ body textarea:required:valid
 {
     position: relative;
 
-    margin-bottom: 60px;
+    margin-bottom: 70px;
 }
 
 .form-element__num
@@ -779,8 +779,8 @@ body textarea:required:valid
     line-height: 64px;
 
     position: absolute;
-    top: -24px;
-    left: -92px;
+    top: -22px;
+    left: -90px;
 
     width: 64px;
     height: 64px;
@@ -797,13 +797,23 @@ body textarea:required:valid
 .form-element__label
 {
     font-family: 'DINProBold', sans-serif;
-    line-height: 25px;
+    line-height: 1.6em;
 
     display: block;
 
-    margin-bottom: 10px;
+    margin-bottom: .75em;
 
     letter-spacing: -.01em;
+}
+
+.fieldset .form-element:last-child
+{
+    margin-bottom: 0;
+}
+
+.form-submit
+{
+    padding-top: 60px;
 }
 
 div.error
@@ -1181,10 +1191,13 @@ button
 
 .form-section
 {
-    height: 1130px;
+    padding-top: 120px;
+    padding-bottom: 120px;
 }
 
 .form-section__title
 {
-    line-height: 52px;
+    line-height: 1.3em;
+
+    margin-bottom: 2.05em;
 }

@@ -46,12 +46,12 @@ body textarea:required:valid
 
 .form-element
 	position: relative
-	margin-bottom: 60px
+	margin-bottom: 70px
 
 	&__num
 		position: absolute
-		top: -24px
-		left: -92px
+		top: -22px
+		left: -90px
 		width: 64px
 		height: 64px
 		font-size: 20px
@@ -65,10 +65,19 @@ body textarea:required:valid
 	
 	&__label
 		display: block
-		margin-bottom: 10px
+		margin-bottom: 0.75em
 		font-family: $dinBold
-		line-height: 25px
+		line-height: 1.6em
 		letter-spacing: -0.01em
+
+.fieldset
+	.form-element
+
+		&:last-child
+			margin-bottom: 0
+
+.form-submit
+	padding-top: 60px
 
 div.error
 	margin-top: 0.5em
