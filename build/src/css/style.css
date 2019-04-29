@@ -831,7 +831,7 @@ div.error
 {
     font-size: 24px;
     font-weight: 400;
-    line-height: 48px;
+    line-height: 35px;
 
     display: block;
 
@@ -887,6 +887,13 @@ div.error
 .input:focus
 {
     border-bottom-color: #f7f8fa;
+}
+
+textarea.input
+{
+    resize: none;
+
+    outline: none;
 }
 
 /**
@@ -1124,6 +1131,8 @@ button
 
     display: inline-block;
 
+    padding-left: 46px;
+
     vertical-align: top;
     letter-spacing: .02em;
 }
@@ -1135,7 +1144,7 @@ button
 
     position: absolute;
     top: 50%;
-    left: -46px;
+    left: 0;
 
     display: block;
 
@@ -1358,7 +1367,20 @@ button
 /* Laptop small */
 @media only screen and (max-width: 1280px)
 {
-    /**/
+    .image-block
+    {
+        height: 550px;
+    }
+    .advantages-list
+    {
+        margin: 0 -10px;
+    }
+    .advantages-item
+    {
+        width: -webkit-calc(33.33% - 20px);
+        width:         calc(33.33% - 20px);
+        margin: 0 10px;
+    }
 }
 
 /* Large Devices, Wide Screens */
@@ -1370,13 +1392,29 @@ button
 /* Medium Devices, iPad Pro */
 @media only screen and (max-width: 1024px)
 {
-    /**/
+    .image-block
+    {
+        height: 440px;
+    }
+    .features-section
+    {
+        height: auto;
+    }
 }
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 992px)
 {
-    /**/
+    .advantages-item
+    {
+        width: -webkit-calc(50% - 20px);
+        width:         calc(50% - 20px);
+        margin-bottom: 40px;
+    }
+    .advantages-item:last-child
+    {
+        margin-bottom: 0;
+    }
 }
 
 /* Medium Devices */
@@ -1400,13 +1438,67 @@ button
 /* Small Devices, Tablets, iPad */
 @media only screen and (max-width: 768px)
 {
-    /**/
+    h2,
+    .h2
+    {
+        font-size: 40px;
+    }
+    h3,
+    .h3
+    {
+        font-size: 36px;
+    }
+    .image-block
+    {
+        height: 320px;
+    }
+    .features-list
+    {
+        top: -80px;
+    }
+    .features-item
+    {
+        padding-top: 30px;
+        padding-right: 40px;
+        padding-bottom: 40px;
+        padding-left: 40px;
+    }
+    .features-item__descr
+    {
+        font-size: 20px;
+    }
+    .advantages-item__title
+    {
+        font-size: 18px;
+    }
+    .form-outer
+    {
+        padding: 0 50px;
+    }
+    .form-element__num
+    {
+        position: static;
+        top: auto;
+        left: auto;
+
+        margin-bottom: 20px;
+    }
 }
 
 /* Small Devices, Tablets */
 @media only screen and (max-width: 640px)
 {
-    /**/
+    .features-item
+    {
+        padding-top: 20px;
+        padding-right: 30px;
+        padding-bottom: 30px;
+        padding-left: 30px;
+    }
+    .features-item__descr
+    {
+        font-size: 18px;
+    }
 }
 
 /* HTC One */
@@ -1418,13 +1510,121 @@ button
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px)
 {
-    /**/
+    body
+    {
+        font-size: 14px;
+    }
+    h2,
+    .h2
+    {
+        font-size: 36px;
+    }
+    h3,
+    .h3
+    {
+        font-size: 30px;
+    }
+    .top-section
+    {
+        padding-top: 80px;
+        padding-bottom: 60px;
+    }
+    .top-section__link:hover::before,
+    .top-section__link:focus::before
+    {
+        width: 210px;
+    }
+    .image-block
+    {
+        height: 200px;
+    }
+    .features-list
+    {
+        top: -50px;
+    }
+    .features-item
+    {
+        width: 100%;
+
+        text-align: center;
+    }
+    .content-section
+    {
+        padding-top: 40px;
+        padding-bottom: 50px;
+    }
+    .advantages-section
+    {
+        padding-top: 60px;
+        padding-bottom: 80px;
+    }
+    .advantages-list
+    {
+        margin: 0;
+    }
+    .advantages-item
+    {
+        display: block;
+
+        width: 100%;
+        margin-right: 0;
+        margin-left: 0;
+    }
+    .advantages-item__title
+    {
+        margin-top: 20px;
+    }
+    .advantages-item__descr
+    {
+        font-size: 14px;
+    }
+    .form-section
+    {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    .form-outer
+    {
+        padding: 0 10px;
+    }
+    .form-element
+    {
+        margin-bottom: 40px;
+    }
+    .form-element__num
+    {
+        font-size: 18px;
+        line-height: 50px;
+
+        width: 50px;
+        height: 50px;
+        margin-bottom: 10px;
+    }
+    .input
+    {
+        font-size: 20px;
+
+        padding: 10px 0;
+    }
+    .form-submit
+    {
+        padding-top: 30px;
+    }
+    .btn
+    {
+        line-height: 44px;
+
+        height: 44px;
+    }
 }
 
 /* Iphone 6/8/9 Plus */
 @media only screen and (max-width: 414px)
 {
-    /**/
+    .image-block
+    {
+        height: 180px;
+    }
 }
 
 /* Extra Small Devices, Phones */
@@ -1436,48 +1636,26 @@ button
 /* Iphone 6/8/9/X */
 @media only screen and (max-width: 375px)
 {
-    /**/
+    .image-block
+    {
+        height: 160px;
+    }
 }
 
 /* Galaxy S5 */
 @media only screen and (max-width: 360px)
 {
-    /**/
+    .image-block
+    {
+        height: 150px;
+    }
 }
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width: 320px)
 {
-    /**/
-}
-
-/*==========  Mobile First  ==========*/
-/* Custom, iPhone Retina */
-@media only screen and (min-width: 320px)
-{
-    /**/
-}
-
-/* Extra Small Devices, Phones */
-@media only screen and (min-width: 480px)
-{
-    /**/
-}
-
-/* Small Devices, Tablets */
-@media only screen and (min-width: 768px)
-{
-    /**/
-}
-
-/* Medium Devices, Desktops */
-@media only screen and (min-width: 992px)
-{
-    /**/
-}
-
-/* Large Devices, Wide Screens */
-@media only screen and (min-width: 1200px)
-{
-    /**/
+    .image-block
+    {
+        height: 135px;
+    }
 }

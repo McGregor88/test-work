@@ -99,6 +99,7 @@ function scripts() {
 	return (
 		gulp.src([
 			"src/js/jquery.min.js",
+			"src/js/jquery.matchHeight.min.js",
 			"src/js/jquery.maskedinput.min.js",
 			"src/js/jquery.validate.min.js",
 			"src/js/messages_ru.min.js",

@@ -14,7 +14,15 @@
 
 /* Laptop small */
 @media only screen and (max-width : 1280px)
-	/**/
+	.image-block
+		height: 550px
+
+	.advantages-list
+		margin: 0 -10px
+
+	.advantages-item
+		margin: 0 10px
+		width: calc(33.33% - 20px)
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px)
@@ -22,11 +30,20 @@
 
 /* Medium Devices, iPad Pro */
 @media only screen and (max-width : 1024px)
-	/**/
+	.image-block
+		height: 440px
+	
+	.features-section
+		height: auto
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
-	/**/
+	.advantages-item
+		margin-bottom: 40px
+		width: calc(50% - 20px)
+
+		&:last-child
+			margin-bottom: 0
 
 /* Medium Devices */
 @media only screen and (max-width : 960px)
@@ -42,11 +59,54 @@
 
 /* Small Devices, Tablets, iPad */
 @media only screen and (max-width : 768px)
-	/**/
+	h2, .h2
+		font-size: 40px
+	h3, .h3
+		font-size: 36px
+
+	.image-block
+		height: 320px
+
+	.features-list
+		top: -80px
+
+	.features-item
+		padding: 
+			top: 30px
+			left: 40px
+			right: 40px
+			bottom: 40px
+
+		&__descr
+			font-size: 20px
+
+	.advantages-item
+		
+		&__title
+			font-size: 18px
+
+	.form-outer
+		padding: 0 50px
+
+	.form-element
+		
+		&__num
+			position: static
+			top: auto
+			left: auto
+			margin-bottom: 20px
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 640px)
-	/**/
+	.features-item
+		padding: 
+			top: 20px
+			left: 30px
+			right: 30px
+			bottom: 30px
+
+		&__descr
+			font-size: 18px
 
 /* HTC One */
 @media only screen and (max-width : 540px)
@@ -54,11 +114,96 @@
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
-	/**/
+	body
+		font-size: 14px
+
+	h2, .h2
+		font-size: 36px
+	h3, .h3
+		font-size: 30px
+
+	.top-section
+		padding: 
+			top: 80px
+			bottom: 60px
+
+	.top-section__link
+		&:hover,
+		&:focus
+			&::before
+				width: 210px
+
+	.image-block
+		height: 200px
+
+	.features-list
+		top: -50px
+
+	.features-item
+		width: 100%
+		text-align: center
+
+	.content-section
+		padding: 
+			top: 40px
+			bottom: 50px
+
+	.advantages-section
+		padding: 
+			top: 60px
+			bottom: 80px
+
+	.advantages-list
+		margin: 0
+
+	.advantages-item
+		display: block
+		margin: 
+			left: 0
+			right: 0
+		width: 100%
+
+		&__title
+			margin-top: 20px
+
+		&__descr
+			font-size: 14px
+
+	.form-section
+		padding:
+			top: 60px
+			bottom: 60px
+
+	.form-outer
+		padding: 0 10px
+
+	.form-element
+		margin-bottom: 40px
+		
+		&__num
+
+			width: 50px
+			height: 50px
+			margin-bottom: 10px
+			line-height: 50px
+			font-size: 18px
+
+	.input
+		padding: 10px 0
+		font-size: 20px
+
+	.form-submit
+		padding-top: 30px
+
+	.btn
+		height: 44px
+		line-height: 44px
+
 
 /* Iphone 6/8/9 Plus */
 @media only screen and (max-width : 414px)
-	/**/
+	.image-block
+		height: 180px
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 400px)
@@ -66,39 +211,15 @@
 
 /* Iphone 6/8/9/X */
 @media only screen and (max-width : 375px)
-	/**/
+	.image-block
+		height: 160px
 
 /* Galaxy S5 */
 @media only screen and (max-width : 360px)
-	/**/
+	.image-block
+		height: 150px
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)
-	/**/
-
-
-/*==========  Mobile First  ==========*/
-
-/* Custom, iPhone Retina */
-@media only screen and (min-width : 320px)
-	/**/
-
-
-/* Extra Small Devices, Phones */
-@media only screen and (min-width : 480px)
-	/**/
-
-
-/* Small Devices, Tablets */
-@media only screen and (min-width : 768px)
-	/**/
-
-
-/* Medium Devices, Desktops */
-@media only screen and (min-width : 992px)
-	/**/
-
-
-/* Large Devices, Wide Screens */
-@media only screen and (min-width : 1200px)
-	/**/
+	.image-block
+		height: 135px

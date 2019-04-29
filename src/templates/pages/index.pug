@@ -28,7 +28,7 @@ html(lang="ru")
 				.container-md
 					ul.features-list.wrapper
 						each item in features
-							li.features-item
+							li.features-item.js-equalize
 								.features-item__name.text-upper.color-orange #{item.name}
 								p.features-item__descr #{item.descr}
 
@@ -103,14 +103,10 @@ html(lang="ru")
 									required: true
 								})
 
-								+input_field({
-									num: 4,
-									label: "Какой деятельностью, не связанной с текущими проектами, вы бы хотели заниматься в рабочее время?",
-									name: "activity",
-									placeholder: "Свой проект по созданию универсальной инфраструктуры строительства",
-									required: true,
-									minLength: 4
-								})
+								.form-element
+									.form-element__num.color-orange 4
+									label.form-element__label(for="activity") Какой деятельностью, не связанной с текущими проектами, вы бы хотели заниматься в рабочее время?
+									textarea.input(id="activity" name="activity" placeholder="Свой проект по созданию универсальной инфраструктуры строительства" required="required" minlength="4")
 							
 							.form-submit
 								input.btn.btn-block(type="submit" value="Отправить")/

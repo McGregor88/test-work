@@ -21,6 +21,11 @@ $(document).ready(function () {
 
 	}
 
+	// Equalize
+	if ($(".js-equalize").length) {
+		$(".js-equalize").matchHeight();
+	}
+
 	// Form
 	if ($(".form").length) {
 		$(".form").one("mouseenter", function () {
