@@ -20,8 +20,8 @@ html(lang="ru")
 					p.top-section__descr Мы ищем #[strong.color-orange талантов] и #[strong.color-orange саппортов] в команду. Решите на какую категорию вы претендуете.
 					a.top-section__link.text-upper.js-scroll(href="#profile") Заполнить анкету
 
-			//- Image section
-			section.image-section(style={"background-image":"url('upload/image.png')"})
+			//- Image block
+			.image-block(style={"background-image":"url('upload/image.png')"})
 
 			//- Features section
 			section.features-section.gray-theme
@@ -114,3 +114,9 @@ html(lang="ru")
 							
 							.form-submit
 								input.btn.btn-block(type="submit" value="Отправить")/
+
+							input(type="hidden" name="success_title" value="Спасибо!")/
+							input(type="hidden" name="success_message" value="Наши специалисты с Вами скоро свяжутся! Пожалуйста, ожидайте!")/
+
+		//- Modal
+		include ../partials/modal/all

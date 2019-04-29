@@ -892,6 +892,140 @@ div.error
 /**
  * Modal styling
  */
+.fancybox-container
+{
+    z-index: 2000;
+}
+
+.fancybox-loading
+{
+    position: fixed;
+}
+
+.popup
+{
+    position: relative;
+
+    overflow: hidden;
+
+    padding: 30px;
+
+    background-color: transparent;
+}
+
+.popup__wrapper
+{
+    overflow: hidden;
+
+    max-width: 350px;
+
+    -webkit-border-radius: 3px;
+            border-radius: 3px;
+}
+
+.popup .fancybox-close-small
+{
+    top: -12px;
+    right: -12px;
+
+    width: 50px;
+    height: 50px;
+    margin: 0;
+    padding: 0;
+
+    opacity: 1;
+    color: #f7f5fa;
+    background-color: transparent;
+}
+
+.popup .fancybox-close-small:hover,
+.popup .fancybox-close-small:focus
+{
+    color: #f47821;
+}
+
+.popup__head
+{
+    padding: 20px 10px;
+
+    text-align: center;
+
+    background-color: #f7f5fa;
+}
+
+.popup__body
+{
+    padding-top: 40px;
+    padding-right: 34px;
+    padding-bottom: 38px;
+    padding-left: 34px;
+
+    background-color: #fff;
+}
+
+.popup.popup-success .popup__wrapper
+{
+    max-width: 440px;
+}
+
+.popup-title
+{
+    margin: 0;
+}
+
+.success-message
+{
+    font-size: 18px;
+    line-height: 1.33em;
+
+    overflow: hidden;
+
+    text-align: center;
+}
+
+@media screen and (max-width: 480px)
+{
+    /**/
+    .popup
+    {
+        padding: 20px;
+    }
+    .popup__wrapper
+    {
+        width: 100%;
+    }
+    .popup__body
+    {
+        padding-top: 26px;
+        padding-right: 20px;
+        padding-bottom: 25px;
+        padding-left: 20px;
+    }
+    .popup .fancybox-close-small
+    {
+        top: -6px;
+        right: -6px;
+
+        width: 30px;
+        height: 30px;
+    }
+    .success-message
+    {
+        font-size: 16px;
+    }
+}
+
+/* Iphone 6/8/9/X */
+@media only screen and (max-width: 375px)
+{
+    /**/
+    .popup__body
+    {
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+}
+
 button,
 html [type='button'],
 [type='reset'],
@@ -1001,7 +1135,7 @@ button
 
     position: absolute;
     top: 50%;
-    left: -48px;
+    left: -46px;
 
     display: block;
 
@@ -1031,7 +1165,7 @@ button
     width: 236px;
 }
 
-.image-section
+.image-block
 {
     height: 600px;
 
@@ -1200,4 +1334,150 @@ button
     line-height: 1.3em;
 
     margin-bottom: 2.05em;
+}
+
+/*==========  Desktop First  ==========*/
+/* XL */
+@media only screen and (max-width: 1600px)
+{
+    /**/
+}
+
+/* Laptop large */
+@media only screen and (max-width: 1440px)
+{
+    /**/
+}
+
+/* Laptop */
+@media only screen and (max-width: 1366px)
+{
+    /**/
+}
+
+/* Laptop small */
+@media only screen and (max-width: 1280px)
+{
+    /**/
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width: 1200px)
+{
+    /**/
+}
+
+/* Medium Devices, iPad Pro */
+@media only screen and (max-width: 1024px)
+{
+    /**/
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 992px)
+{
+    /**/
+}
+
+/* Medium Devices */
+@media only screen and (max-width: 960px)
+{
+    /**/
+}
+
+/* Medium Devices, Tablets */
+@media only screen and (max-width: 854px)
+{
+    /**/
+}
+
+/* Medium Devices, Tablets */
+@media only screen and (max-width: 800px)
+{
+    /**/
+}
+
+/* Small Devices, Tablets, iPad */
+@media only screen and (max-width: 768px)
+{
+    /**/
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width: 640px)
+{
+    /**/
+}
+
+/* HTC One */
+@media only screen and (max-width: 540px)
+{
+    /**/
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 480px)
+{
+    /**/
+}
+
+/* Iphone 6/8/9 Plus */
+@media only screen and (max-width: 414px)
+{
+    /**/
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 400px)
+{
+    /**/
+}
+
+/* Iphone 6/8/9/X */
+@media only screen and (max-width: 375px)
+{
+    /**/
+}
+
+/* Galaxy S5 */
+@media only screen and (max-width: 360px)
+{
+    /**/
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width: 320px)
+{
+    /**/
+}
+
+/*==========  Mobile First  ==========*/
+/* Custom, iPhone Retina */
+@media only screen and (min-width: 320px)
+{
+    /**/
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width: 480px)
+{
+    /**/
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width: 768px)
+{
+    /**/
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width: 992px)
+{
+    /**/
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width: 1200px)
+{
+    /**/
 }

@@ -1,3 +1,98 @@
 /**
  * Modal styling
  */
+
+.fancybox-container
+	z-index: 2000
+
+.fancybox-loading
+	position: fixed
+
+.popup
+	position: relative
+	background-color: transparent
+	padding: 30px
+	overflow: hidden
+
+	&__wrapper
+		max-width: 350px
+		border-radius: 3px
+		overflow: hidden
+
+	.fancybox-close-small
+		top: -12px
+		right: -12px
+		padding: 0
+		margin: 0
+		width: 50px
+		height: 50px
+		background-color: transparent
+		opacity: 1
+		color: $gray
+
+		&:hover,
+		&:focus
+			color: $orange
+
+	&__head
+		padding: 20px 10px
+		background-color: $gray
+		text-align: center
+
+	&__body
+		padding: 
+			top: 40px
+			left: 34px
+			right: 34px
+			bottom: 38px
+		background-color: $white
+
+	&.popup-success
+
+		.popup
+
+			&__wrapper
+				max-width: 440px
+
+.popup-title
+	margin: 0
+
+.success-message
+	overflow: hidden
+	font-size: 18px
+	line-height: 1.33em
+	text-align: center
+
+@media screen and (max-width: 480px)
+	/**/
+	.popup
+		padding: 20px
+
+		&__wrapper
+			width: 100%
+
+		&__body
+			padding: 
+				top: 26px
+				left: 20px
+				right: 20px
+				bottom: 25px
+		
+		.fancybox-close-small
+			top: -6px
+			right: -6px
+			width: 30px
+			height: 30px
+
+	.success-message
+		font-size: 16px
+
+/* Iphone 6/8/9/X */
+@media only screen and (max-width: 375px)
+	/**/
+	.popup
+
+		&__body
+			padding: 
+				left: 10px
+				right: 10px

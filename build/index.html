@@ -7,6 +7,7 @@
     <!-- disable safari phone number detection-->
     <meta name="format-detection" content="telephone=no"/>
     <title>Meandr test</title>
+    <link href="src/css/jquery.fancybox.min.css" rel="stylesheet"/>
     <link href="src/css/style.css?v=1" rel="stylesheet"/>
     <script src="src/js/scripts.min.js"></script>
     <script src="src/js/common.js?v=1"></script>
@@ -19,7 +20,7 @@
           <p class="top-section__descr">Мы ищем <strong class="color-orange">талантов</strong> и <strong class="color-orange">саппортов</strong> в команду. Решите на какую категорию вы претендуете.</p><a class="top-section__link text-upper js-scroll" href="#profile">Заполнить анкету</a>
         </div>
       </section>
-      <section class="image-section" style="background-image:url('upload/image.png');"></section>
+      <div class="image-block" style="background-image:url('upload/image.png');"></div>
       <section class="features-section gray-theme">
         <div class="container-md">
           <ul class="features-list wrapper">
@@ -120,10 +121,24 @@
               <div class="form-submit">
                 <input class="btn btn-block" type="submit" value="Отправить"/>
               </div>
+              <input type="hidden" name="success_title" value="Спасибо!"/>
+              <input type="hidden" name="success_message" value="Наши специалисты с Вами скоро свяжутся! Пожалуйста, ожидайте!"/>
             </form>
           </div>
         </div>
       </section>
+    </div>
+    <div class="modals-wrap" style="display:none;">
+      <div class="popup popup-success" id="success">
+        <div class="popup__wrapper">
+          <div class="popup__head"><span class="popup-title h3"></span></div>
+          <div class="popup__body">
+            <div class="success-message">
+              <p>&nbsp;</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>
